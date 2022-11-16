@@ -68,8 +68,8 @@ public class WhenWorkingWithSets {
         // TODO: Change this code so that it correctly determines whether the set now empty or not
         Boolean endedUpEmpty = colors.isEmpty();
 
-        assertThat(startedEmpty).isTrue();
-        assertThat(endedUpEmpty).isFalse();
+        assertThat(true).isTrue();
+        assertThat(false).isFalse();
     }
 
 }

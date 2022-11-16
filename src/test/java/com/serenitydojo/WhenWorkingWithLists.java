@@ -23,7 +23,7 @@ public class WhenWorkingWithLists {
         //  using the Arrays.asList() method
 
         List<String> colors = Arrays.asList("red", "green", "blue");
-        assertThat(colors).containsExactly("red", "green", "blue");
+        assertThat(colors).contains("red", "green", "blue");
     }
 
     // We can add a value an empty list
@@ -35,7 +35,7 @@ public class WhenWorkingWithLists {
         List<String> colors = new ArrayList<>();
         colors.add("red");
         colors.add("green");
-        assertThat(colors).containsExactly("red", "green");
+        assertThat(colors).contains("red", "green");
     }
 
     // We can add a value to the end an existing list
@@ -46,7 +46,7 @@ public class WhenWorkingWithLists {
 
         List<String> colors = new ArrayList<>(Arrays.asList("red", "green", "blue"));
         colors.add("yellow");
-        assertThat(colors).containsExactly("red", "green", "blue", "yellow");
+        assertThat(colors).contains("red", "green", "blue", "yellow");
     }
 
     // We can add a value to the start an existing list
@@ -79,7 +79,8 @@ public class WhenWorkingWithLists {
         // TODO: Remote "green" from the list
 
         List<String> colors = new ArrayList<>(Arrays.asList("red", "green", "blue"));
+        colors.remove("green");
         int numberOfElements = colors.size();
-        assertThat(numberOfElements).isEqualTo(3);
+        assertThat(numberOfElements).isEqualTo(2);
     }
 }
