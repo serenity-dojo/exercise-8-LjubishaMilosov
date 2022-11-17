@@ -17,33 +17,36 @@ public class WhenWorkingWithSets {
     // We can create a set and add values to the set
     @Test
     public void creatingANewSet() {
+        Set<String> colors = null;
 
         // TODO: Create a new HashSet and add the values "red", "green", and "blue"
-
-        Set<String> colors = new HashSet<>();
+        colors = new HashSet<>();
         colors.add("red");
         colors.add("green");
         colors.add("blue");
+
         assertThat(colors).containsExactlyInAnyOrder("red", "green", "blue");
     }
 
     // We can create a set containing a specified list of values")
     @Test
     public void creatingASetOfValues() {
+        Set<String> colors = null;
 
         // TODO: Create a set of Strings containing the values "red", "green" and "blue"
         //  using the Set.of() method
-        Set<String> colors = new HashSet<>(Set.of("red", "green", "blue"));
+
+        colors = Set.of("red","green","blue");
+
         assertThat(colors).containsExactlyInAnyOrder("red", "green", "blue");
     }
 
     // A Set cannot contain duplicates")
     @Test
     public void addAValueTwice() {
+        Set<String>colors = new HashSet<>(Set.of("red", "green", "blue"));
 
         // TODO: Read the following code, and assign the correct value to expectedSize to make the test pass
-
-        Set<String>colors = new HashSet<>(Set.of("red", "green", "blue"));
         colors.add("red");
         colors.add("yellow");
         colors.add("red");
@@ -68,8 +71,8 @@ public class WhenWorkingWithSets {
         // TODO: Change this code so that it correctly determines whether the set now empty or not
         Boolean endedUpEmpty = colors.isEmpty();
 
-        assertThat(true).isTrue();
-        assertThat(false).isFalse();
+        assertThat(startedEmpty).isTrue();
+        assertThat(endedUpEmpty).isFalse();
     }
 
 }
